@@ -1,57 +1,31 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
+// global var
 
-/**
- * Define Global Variables
- * 
-*/
+var sections = document.querySelectorAll('section');
+var fragment = document.createDocumentFragment();
+var nav = document.querySelector('#navBar');
+var navList = document.querySelector('#navList');
 
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
+//Creating the nav bar with its tabs using looping on query selector
 
+//looping on sections to create nav items depend on sections numbers
+sections.forEach(section => {
 
+    //create nav list items
+    var navItem = document.createElement('li');
+    var navlink = document.createElement('button');
 
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
+    //us data attr to make tet content of nav item equal to section heading
+    var sectionName = section.getAttribute("data-nav");
 
-// build the nav
+    //add link attr to button to use it to reach the section which it refer to 
+    navlink.setAttribute('href', "#" + section.id);
+    //use css class to style items
+    navlink.classList.add("menu__link");
 
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-
+    navItem.appendChild(navlink);
+    navlink.textContent = sectionName;
+    fragment.appendChild(navItem);
+});
+//appending fragment object to ul
+navList.appendChild(fragment);
