@@ -26,6 +26,7 @@ For specific, detailed instructions, look at the project instructions in the Uda
 4. make back to top button when scroll down. 
 5. make navbar disapear when no scrolling. 
 6. make nav item got heighlited when the section which it refer to appear in viewport
+7. make webpage responsive specially navbar.
 
 
 ### Creat-NavBar 
@@ -49,3 +50,13 @@ For specific, detailed instructions, look at the project instructions in the Uda
 1. create an element with zero width and zero height at top of page to refer scrolling too
 2. use **addeventlistener** and **pageyoffset** to check how much user scrolled.
 3. use **addeventlistener** and **scrollintoview** to control scroll behaviour by clicking on backtop button. 
+
+
+### Section-Avtive-state
+
+1. using **intersecting observer** from css tricks to check if section is in viewport or not
+2. using **rootmargin** to detect if section in view port or not bu check margins values 
+3. after creating observer object  and its function adding and removing active class 
+4. loob on sections and observe it.
+
+

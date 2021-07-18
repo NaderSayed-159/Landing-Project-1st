@@ -5,12 +5,35 @@ var fragment = document.createDocumentFragment();
 var nav = document.querySelector('#navBar');
 var navList = document.querySelector('#navList');
 
+//add active class to section if it in viewport using intersection observer
+
+//create observer object 
+
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        //check if the section in viewport add and remove class using elements mehtods
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active-sec");
+        } else {
+            entry.target.classList.remove("active-sec");
+
+        }
+    });
+}, {
+    // using rootmargins to  calc how much section in viewport
+    rootMargin: "-50% 0% -50% 0%"
+});
+
 
 
 //Creating the nav bar with its tabs using looping on query selector
 
 //looping on sections to create nav items depend on sections numbers
 sections.forEach(section => {
+    //usig observer to observ the section
+    observer.observe(section);
+
 
     //create nav list items
     var navItem = document.createElement('li');
