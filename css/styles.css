@@ -77,7 +77,36 @@ section {
     display: flex;
     justify-content: space-around;
     transition: 0.38s;
-    opacity: 0;
+    opacity: 1;
+}
+
+.navbar__menu i {
+    margin: 15px;
+    font-size: 1.5rem;
+    color: black;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:576px) {
+    .navbar__menu ul {
+
+        display: none;
+    }
+
+    .navbar__menu i {
+
+        display: block;
+    }
+
+
+}
+
+.resposiveNav {
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 .navbar__menu li {
@@ -141,10 +170,10 @@ section {
     width: 100%;
     z-index: 5;
     /*updateheadertoaddnoscrollingfeature*/
-    max-height: 0px;
+    max-height: 500px;
     transition: 0.4s;
-
 }
+
 
 /* Footer Styles */
 .page__footer {

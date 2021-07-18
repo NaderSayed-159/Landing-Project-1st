@@ -136,21 +136,39 @@ document.addEventListener('scroll', function () {
 
 //creating var to clear timeout when we need
 var Scrolling,
-    headerTag = document.querySelector('header');
+    headerTag = document.querySelector('header'),
+    navIcon = document.querySelector('i');
+
+
+//default valuse
+
+
 window.addEventListener('scroll', function () {
 
     // clearing timeout on scroll
     window.clearTimeout(Scrolling);
     //while scrolling nav has height and nav items appeared
-    headerTag.style.maxHeight = 100 + 'px';
+    headerTag.style.maxHeight = 500 + 'px';
     navList.style.opacity = 1;
+    navIcon.style.opacity = 1;
 
     // Set a timeout to run after scrolling ends
     Scrolling = setTimeout(function () {
-
-        headerTag.style.maxHeight = null;
-        navList.style.opacity = 0;
+        if (window.pageYOffset != 0) {
+            headerTag.style.maxHeight = 0;
+            navList.style.opacity = 0;
+            navIcon.style.opacity = 0;
+        }
         //after 3sec time out will change the valus of nav items and header 
-    }, 3000);
+    }, 3500);
 
 }, false);
+
+
+//responsive nav bar 
+
+navIcon.addEventListener('click', function () {
+    //add or remove class onclick
+    navList.classList.toggle('resposiveNav');
+
+});

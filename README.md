@@ -4,11 +4,13 @@
 
 * [Instructions](#instructions)
 * [Landing Project Features](#Landing-Project-Features)
+* [the imortant features methods](#Features-Methods)
 * [Creating of Navbar](#Creat-NavBar)
 * [Scrolling On Click Behaviour](#Scrolling-to-Sections)
 * [Back To Top Button](#Back-To-Top)
 * [Nav item active state](#Nav-item-Highlight)
 * [NavBar state while no scrolling](#NavBar-While-NoScrolling)
+* [Responsive NavBar](#Responsive-NavBar)
 
 
 ## Instructions
@@ -18,6 +20,7 @@ The starter project has some HTML and CSS styling to display a static version of
 To get started, open `js/app.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+
 
 
 ## Landing-Project-Features 
@@ -30,6 +33,12 @@ For specific, detailed instructions, look at the project instructions in the Uda
 6. make nav item get highlighted when the section which it refer to appear in viewport
 7. make webpage responsive specially navbar.
 
+## Features-Methods
+
+1. intersection observer from **css tricks**.
+2. scrollIntoView from **w3School**.
+3. document Fragment()
+4. set time out and clear it as mention in suggested
 
 ### Creat-NavBar 
 
@@ -73,6 +82,10 @@ For specific, detailed instructions, look at the project instructions in the Uda
 1. using **setTimeout**  method and **cleartimeout** to make nav bar disappear after certine time as mentioned in suggested in dev strategy.
 2. changes done in styling proparties like **maxheight** of header and **opacity** of nav items.
 
+### Responsive-NavBar
+
+1. create class control displaying of nav items to toggle it on click
+2. add event listener to **fontawesome** icon added to html only appear in certine view width using **media-query**.
 
 
 
