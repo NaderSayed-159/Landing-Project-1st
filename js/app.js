@@ -20,7 +20,7 @@ sections.forEach(section => {
     var sectionName = section.getAttribute("data-nav");
 
     //add link attr to button to use it to reach the section which it refer to 
-    navlink.setAttribute('href', "#" + section.id);
+
     //use css class to style items
     navlink.classList.add("menu__link");
 
@@ -39,7 +39,7 @@ var sectionlinks = document.querySelectorAll('button');
 //looping on all links in nav bar to check for which it refer to 
 
 sectionlinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', function () {
 
         //looping in sections to get the right section 
         sections.forEach(section => {
@@ -51,7 +51,36 @@ sectionlinks.forEach(link => {
                 section.scrollIntoView({
                     behavior: "smooth"
                 });
+
             }
         });
     });
 });
+
+
+//back top bottom
+
+var backTop = document.getElementById('backTop'),
+    topPage = document.getElementById('top');
+
+// scrolling event
+
+document.addEventListener('scroll', function () {
+    //use of pageYOffest to check how much user scrolled
+    if (window.pageYOffset > 30) {
+        backTop.style.opacity = "1";
+    } else {
+        backTop.style.opacity = "0";
+    }
+});
+
+// back top top functionallity using scrollingtoview
+
+backTop.addEventListener('click', function () {
+
+    topPage.scrollIntoView({
+        behavior: "smooth"
+    });
+
+
+})
