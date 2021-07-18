@@ -6,6 +6,7 @@ var nav = document.querySelector('#navBar');
 var navList = document.querySelector('#navList');
 
 
+
 //Creating the nav bar with its tabs using looping on query selector
 
 //looping on sections to create nav items depend on sections numbers
@@ -29,3 +30,28 @@ sections.forEach(section => {
 });
 //appending fragment object to ul
 navList.appendChild(fragment);
+
+
+// make nav item scroll smoothly to the section which refer to
+//selecting buttons after define it
+var sectionlinks = document.querySelectorAll('button');
+
+//looping on all links in nav bar to check for which it refer to 
+
+sectionlinks.forEach(link => {
+    link.addEventListener('click', () => {
+
+        //looping in sections to get the right section 
+        sections.forEach(section => {
+
+            //check which secion the button will refer to
+            if (link.textContent == section.getAttribute("data-nav")) {
+
+                //using scroll into view to contol the scrolling and its behavior as mentiond in w3school
+                section.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
