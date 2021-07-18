@@ -22,10 +22,10 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
 1. create dynmic navbar depends on sections number.
 2. make section appear when click on nav item which refer to with smoothy behavior.
-3. makes section heighlited when it appear in viewport.
+3. makes section highlighted when it appear in viewport.
 4. make back to top button when scroll down. 
 5. make navbar disapear when no scrolling. 
-6. make nav item got heighlited when the section which it refer to appear in viewport
+6. make nav item get highlighted when the section which it refer to appear in viewport
 7. make webpage responsive specially navbar.
 
 
@@ -57,6 +57,14 @@ For specific, detailed instructions, look at the project instructions in the Uda
 1. using **intersecting observer** from css tricks to check if section is in viewport or not
 2. using **rootmargin** to detect if section in view port or not bu check margins values 
 3. after creating observer object  and its function adding and removing active class 
-4. loob on sections and observe it.
+4. loop on sections and observe it.
+
+### Nav-item-Highlight
+
+1. using add or remove classes element method to add active class
+2. after looping on section  **class.contains** got iused to catch which section has active class
+3. use **data-attr** to get which to get which section the nav item text content refer to.
+ 
+
 
 

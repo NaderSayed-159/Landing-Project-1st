@@ -17,8 +17,9 @@ let observer = new IntersectionObserver((entries) => {
             entry.target.classList.add("active-sec");
         } else {
             entry.target.classList.remove("active-sec");
-
         }
+
+
     });
 }, {
     // using rootmargins to  calc how much section in viewport
@@ -105,5 +106,27 @@ backTop.addEventListener('click', function () {
         behavior: "smooth"
     });
 
+});
 
+// adding active class to the viewed secion  on scroll
+document.addEventListener('scroll', function () {
+
+    sectionlinks.forEach(el => {
+        //clear all items from active class
+        el.classList.remove("nav-active");
+
+        sections.forEach(section => {
+            //catch the section which has active class 
+            if (section.classList.contains('active-sec')) {
+
+                //checking if the button has the same content of any section to add active calss to
+                if (el.textContent == section.getAttribute("data-nav")) {
+
+                    el.classList.add("nav-active");
+                } else {
+                    el.classList.remove("nav-active");
+                }
+            }
+        })
+    });
 })
