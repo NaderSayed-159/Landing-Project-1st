@@ -143,6 +143,7 @@ section {
     color: #fff;
     transition: 0.4s;
     z-index: 9999;
+    opacity: 0;
 }
 
 /*item to go to with back top button */
