@@ -6,6 +6,7 @@
 * [Landing Project Features](#Landing-Project-Features)
 * [Creating of Navbar](#Creat-NavBar)
 * [Scrolling On Click Behaviour](#Scrolling-to-Sections)
+* [Back To Top Button](#Back-To-Top)
 
 
 ## Instructions
@@ -41,3 +42,10 @@ For specific, detailed instructions, look at the project instructions in the Uda
 2. looping on buttons then on sections using **forEach** to check where it scroll to on click
 3. using **text-content** of nav item and **data-attribute** of sections in checking.
 4. using **scrollIntoView** as mentiond in w3school to control scrolling and its behaviour
+
+
+### Back-To-Top
+
+1. create an element with zero width and zero height at top of page to refer scrolling too
+2. use **addeventlistener** and **pageyoffset** to check how much user scrolled.
+3. use **addeventlistener** and **scrollintoview** to control scroll behaviour by clicking on backtop button. 
