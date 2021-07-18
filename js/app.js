@@ -112,7 +112,7 @@ backTop.addEventListener('click', function () {
 document.addEventListener('scroll', function () {
 
     sectionlinks.forEach(el => {
-        //clear all items from active class
+        //clear all items from active class in case no section has active class
         el.classList.remove("nav-active");
 
         sections.forEach(section => {
@@ -127,6 +127,30 @@ document.addEventListener('scroll', function () {
                     el.classList.remove("nav-active");
                 }
             }
-        })
+        });
     });
-})
+});
+
+
+// make nav bar disappear when no srolling
+
+//creating var to clear timeout when we need
+var Scrolling,
+    headerTag = document.querySelector('header');
+window.addEventListener('scroll', function () {
+
+    // clearing timeout on scroll
+    window.clearTimeout(Scrolling);
+    //while scrolling nav has height and nav items appeared
+    headerTag.style.maxHeight = 100 + 'px';
+    navList.style.opacity = 1;
+
+    // Set a timeout to run after scrolling ends
+    Scrolling = setTimeout(function () {
+
+        headerTag.style.maxHeight = null;
+        navList.style.opacity = 0;
+        //after 3sec time out will change the valus of nav items and header 
+    }, 3000);
+
+}, false);

@@ -7,6 +7,8 @@
 * [Creating of Navbar](#Creat-NavBar)
 * [Scrolling On Click Behaviour](#Scrolling-to-Sections)
 * [Back To Top Button](#Back-To-Top)
+* [Nav item active state](#Nav-item-Highlight)
+* [NavBar state while no scrolling](#NavBar-While-NoScrolling)
 
 
 ## Instructions
@@ -65,6 +67,13 @@ For specific, detailed instructions, look at the project instructions in the Uda
 2. after looping on section  **class.contains** got iused to catch which section has active class
 3. use **data-attr** to get which to get which section the nav item text content refer to.
  
+
+### NavBar-While-NoScrolling
+
+1. using **setTimeout**  method and **cleartimeout** to make nav bar disappear after certine time as mentioned in suggested in dev strategy.
+2. changes done in styling proparties like **maxheight** of header and **opacity** of nav items.
+
+
 
 
 

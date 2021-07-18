@@ -76,6 +76,8 @@ section {
     text-align: right;
     display: flex;
     justify-content: space-around;
+    transition: 0.38s;
+    opacity: 0;
 }
 
 .navbar__menu li {
@@ -138,6 +140,10 @@ section {
     top: 0;
     width: 100%;
     z-index: 5;
+    /*updateheadertoaddnoscrollingfeature*/
+    max-height: 0px;
+    transition: 0.4s;
+
 }
 
 /* Footer Styles */
